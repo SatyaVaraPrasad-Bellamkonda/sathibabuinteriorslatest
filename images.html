@@ -119,9 +119,9 @@ function addImage(imageSrc) {
   const imageDiv = document.createElement("div");
   imageDiv.classList.add("image");
   const image = document.createElement("img");
-  image.src = "images/"+imageSrc;
+  image.src = imageSrc;
   image.onclick = function() {
-    openOverlay("images/"+imageSrc);
+    openOverlay(imageSrc);
   };
   imageDiv.appendChild(image);
   container.appendChild(imageDiv);
