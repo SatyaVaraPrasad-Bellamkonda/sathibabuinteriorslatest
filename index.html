@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sathi Babu Interiors</title>
+    <link rel="stylesheet" href="interiors.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo4.png" alt="Sathi Babu Interiors Logo">
+        </div>
+        <div class="title">
+            <h1>SATHI BABU INTERIORS</h1>
+            <div class="quote">
+                <p>Dream big in your budget</p>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="images.html">Gallery</a></li>
+            <li><a href="#video">Videos</a></li>
+        </ul>
+    </nav>
+
+    
+
+    <main>
+        <section id="home">
+            <h2>About Us</h2>
+            <div class="services">
+                <div class="services-text">
+                   <h1 class="about-us-heading">INTERIOR DESIGNERS <br>IN HYDERABAD </h3>
+                <p  class="about-us-text">Sathi Babu Interiors has been started 3 Years ago, now we are successfully continuing with 50+ happy customers.<br>
+                    <br><strong >We undertake end to end interior works </strong><br> We use IS710 BWP GRADE POLYWOOD
+                     <br>We use PVC and Acrylic as per customer requirements<br>We use lamination brands like virgo, advance green lam etc..
+                 
+            <h2>We Offer </h2>
+            <p  class="about-us-text" style="font-family:'Times New Roman', Times, serif">1BHK  starts from 2.5 Lakhs<br>
+            2BHK starts from 4.5 Lakhs<br>3BHK starts from 5.5 Lakhs</p>
+                </div>
+                <div class="services-image">
+                    <img src="banner.jpg" alt="services Image">
+                </div>
+            </div>
+
+        </section>
+
+        <section id="gallery">
+            <h2>Gallery</h2>
+            <div class="gallery">
+                <div class="gallery-images">
+                    <img src="/images/image1.jpg"
+                        alt="Gallery Image 1">
+                    <img src="/images/image2.jpg">
+                    <img src="/images/image31.jpg">
+                    <img src="/images/image30.jpg" >
+                </div>
+                <button class="prev" onclick="prevSlide()">&#10094;</button>
+                <button class="next" onclick="nextSlide()">&#10095;</button>
+            </div>
+            <div class="more-images">
+                <a href="images.html" class="load-more-button">More Images</a>
+            </div>
+        </section>
+
+
+        <section id="video">
+            <h2>Video Clips</h2>
+            <div class="video">
+                
+            
+                <iframe width="853" height="480" src="https://www.youtube.com/embed/zXAeATktysw" title="Sathi Babu Interiors | | Introduction | | Home Interiors | | Hyderabad." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+             
+            </div>
+        </section>
+    </main>
+    <div class="container">
+        <h2>Get Free Quote</h2>
+        <form onsubmit="sendEmail(); reset(); return false;" id="quoteForm" >
+            <div class="form-group">
+                <input type="tel" id="phone" name="mobile" placeholder="Phone number" pattern="[6-9]{1}[0-9]{9}" required>
+            </div>
+            <div class="form-group">
+                <input type="email" id="email" name="email" placeholder="Email Id" required>
+            </div>
+            <div class="form-group">
+                <input type="text" id="name" name="name" placeholder="Enter name" required>
+            </div>
+            <div class="form-group">
+               
+                 <select id="message" name="flatType">
+                        <option value="1bhk">1 BHK</option>
+                        <option value="2bhk">2 BHK</option>
+                        <option value="3bhk">3 BHK</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <button type="submit">Send</button>
+            </div>
+        </form>
+    </div>
+    <section id="home">
+        <div class="services">
+            <div class="services-text">
+                <table style="width:100%" >
+                    <tr>
+                    <td width="100px" style="text-align: center;"><h1 class="about-us-address">Contact Info</h3>
+                        <p  class="about-us-text">Flat-No : 507 , 5th Floor<br>CBR Estates<br>Madinaguda<br>Besides Croma<br>Hyderabad</p>
+                       </td>
+                       <td width="100px" style="vertical-align: top;">
+                        <h1 class="about-us-address">Sathi Babu Interiors</h3>
+                            <p  class="about-us-text">1BHK, 2BHK, 3BHK House, modular kitchen, bedroom, living room, wardrobes all interior designs concepts done here.</p>
+                       </td>
+                    </tr>
+                </table>
+                </div>
+           
+        </div>
+
+    </section>
+
+
+    <footer>
+        <div class="contact">
+            <button onclick="callMe()">Call Us <i class='fas fa-phone' style=' transform: scaleX(-1);'></i></button>
+            <button onclick="sendTypeEmail()">Email <i class="fa fa-envelope" aria-hidden="true"></i></button>
+            <button onclick="sendWhatsApp()">WhatsApp <i class="fa fa-whatsapp"></i></button>
+            
+            <a href="https://www.instagram.com/sathibabuinteriors/" target="_blank"><button>Instagram <i class="fa fa-instagram"></i></button></a>
+            <a href="https://www.youtube.com/@SathiBabuInteriors" target="_blank"><button>YouTube <i class="fa fa-youtube"></i></button></a>
+       
+        </div>
+        <p>&copy; 2024 Sathi Babu Interiors. All rights reserved.</p>
+    </footer>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+
+       
+        let slideIndex = 0;
+
+        function showSlides() {
+            const slides = document.querySelectorAll('.gallery-images img');
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.transform = `translateX(${-100 * slideIndex}%)`;
+            }
+        }
+
+        function prevSlide() {
+            if (slideIndex === 0) {
+                slideIndex = document.querySelectorAll('.gallery-images img').length - 1;
+            } else {
+                slideIndex--;
+            }
+            showSlides();
+        }
+
+        function nextSlide() {
+            slideIndex++;
+            if (slideIndex === document.querySelectorAll('.gallery-images img').length) {
+                slideIndex = 0;
+            }
+            showSlides();
+        }
+
+        showSlides();
+
+        function callMe() {
+            window.location.href = 'tel:+919110758038'; // Replace with your phone number
+        }
+
+        function sendTypeEmail() {
+            window.location.href = 'mailto:interiorssathibabu@gmail.com'; // Replace with your email address
+        }
+
+        function sendWhatsApp() {
+            window.location.href = 'https://wa.me/+919110758038'; // Replace with your WhatsApp number
+        }
+        
+
+        function sendEmail(){
+            Email.send({
+                Host : "smtp.elasticemail.com",
+                Username : "prasadbellamkonda26@gmail.com",
+                Password : "445FC21C15D1940740C56F9496C9E85B435A",
+                To : 'interiorssathibabu@gmail.com',
+                From : 'prasadbellamkonda26@gmail.com',
+                Subject : "New enquiry from "+ document.getElementById("name").value,
+                Body : "Name : "+ document.getElementById("name").value +"<br> Email : " +document.getElementById("email").value +"<br> Phone Num: " +document.getElementById("phone").value +"<br> Message: " + document.getElementById("message").options[document.getElementById("message").selectedIndex].text
+            }).then(
+              message => alert("Thank you for your response ! We will get back to you soon.")
+            );
+        }
+        
+    </script>
+
+
+
+</body>
+
+</html>

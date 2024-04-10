@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="interiors.css">
+
+<title>Image Gallery</title>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.image {
+  margin: 10px;
+  position: relative;
+  cursor: pointer;
+}
+.image img {
+  max-width: 100%;
+  height: auto;
+  transition: transform 0.3s;
+}
+.image:hover img {
+  transform: scale(0.75);
+  /*trasform :scale(1.05); actually */
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 2;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.overlay img {
+  max-width: 100%;
+  max-height: 100%;
+  margin: auto;
+  display: block;
+}
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+.download {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+.download button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+</style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+        <img src="logo4.png" alt="Sathi Babu Interiors Logo">
+    </div>
+    <div class="title">
+        <h1>SATHI BABU INTERIORS</h1>
+        <div class="quote">
+            <p>Dream big in your budget</p>
+        </div>
+    </div>
+</header>
+
+<div class="container" id="container"></div>
+
+<div class="overlay" id="overlay">
+  <span class="close" onclick="closeOverlay()">&times;</span>
+  <a id="download" class="download" download><button>Download</button></a>
+  <img id="fullImage" src="" alt="Full Screen Image">
+</div>
+
+<script>
+function openOverlay(imageSrc) {
+  document.getElementById("overlay").style.display = "block";
+  document.getElementById("fullImage").src = imageSrc;
+  document.getElementById("download").href = imageSrc;
+}
+
+function closeOverlay() {
+  document.getElementById("overlay").style.display = "none";
+}
+
+function addImage(imageSrc) {
+  const container = document.getElementById("container");
+  const imageDiv = document.createElement("div");
+  imageDiv.classList.add("image");
+  const image = document.createElement("img");
+  image.src = "images/"+imageSrc;
+  image.onclick = function() {
+    openOverlay("images/"+imageSrc);
+  };
+  imageDiv.appendChild(image);
+  container.appendChild(imageDiv);
+}
+
+// Example: Add images
+for (let i = 1; i <= 30; i++) {
+  addImage(`image${i}.jpg`);
+}
+
+</script>
+
+</body>
+</html>
